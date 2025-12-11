@@ -1,0 +1,78 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the common layout of the site
+// -----------------------------------------------------------------------------
+
+body {
+  background-color: $body-bg;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  overflow: clip;
+  min-height: 100vh;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-size: 100% 100%;
+    z-index: -1;
+  }
+
+  &::before {
+    left: -453px;
+    top: 0;
+    width: 630px;
+    height: 398px;
+    background-image: url('../images/img-decor-01.svg');
+
+    @include media('>=tablet') {
+      left: -350px;
+    }
+
+    @include media('>=desktop') {
+      left: -9vw;
+      width: 50vw;
+      height: 32vw;
+    }
+
+    @include media('>=laptop-s') {
+      width: 44vw;
+      height: 27.5vw;
+      left: 0;
+    }
+
+    @include media('>=laptop') {
+      width: 43.5vw;
+      height: 28vw;
+    }
+  }
+
+  &::after {
+    right: 0;
+    bottom: 20px;
+    width: 210px;
+    height: 368px;
+    background-image: url('../images/img-decor-02.svg');
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @include media('>=tablet') {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include media('>=desktop') {
+    max-width: calc(836px + 2 * 64px);
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}

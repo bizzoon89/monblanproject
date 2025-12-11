@@ -1,0 +1,20 @@
+.btn {
+  vertical-align: top;
+  display: inline-block;
+  color: $grey;
+  font-size: 11px;
+  font-weight: $font-weight-medium;
+  text-transform: uppercase;
+  border: 1px solid $grey;
+  border-radius: 30px;
+  padding: 7px 24px;
+  min-height: 28px;
+  transition:
+    color 0.3s ease,
+    background 0.3s ease;
+
+  &:hover {
+    background: $grey;
+    color: $white;
+  }
+}

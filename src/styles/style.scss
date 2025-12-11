@@ -1,0 +1,31 @@
+// 1. Configuration and helpers
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+// 2. Vendors: include media mixins imported from node_modules
+@import '~include-media/dist/include-media';
+@import 'vendors/normalize';
+@import 'vendors/flatpickr';
+
+// 3. Base styles and elements
+@import 'base/base';
+@import 'base/helpers';
+@import 'base/typography';
+@import 'base/forms';
+
+// 4. Layout-related sections
+@import 'layout/common';
+@import 'layout/header';
+
+// 5. Components
+@import 'components/button';
+@import 'components/view-toggle';
+@import 'components/posts';
+@import 'components/filter-form';
+
+// 6. Page-specific styles
+// @import 'pages/home';
+
+// 7. Themes
+// @import 'themes/themes';

@@ -1,0 +1,120 @@
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  @include media('>=tablet') {
+    gap: 24px;
+  }
+
+  &__field {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    width: 100%;
+
+    @include media('>=phone') {
+      width: calc(50% - 8px);
+    }
+
+    @include media('>=tablet') {
+      width: auto;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__input {
+    @include media('>=tablet') {
+      max-width: 162px;
+    }
+  }
+
+  &__label {
+    width: 100%;
+
+    @include media('>=tablet') {
+      width: auto;
+    }
+  }
+}
+
+.filter-form__input[data-input] {
+  padding-right: 60px;
+}
+
+.date-field {
+  position: relative;
+
+  &__btn {
+    position: absolute;
+    bottom: 1px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ebebeb;
+    width: 28px;
+    height: 26px;
+    border: 0;
+    border-right: 1px solid #dedede;
+  }
+
+  &__btn--clear {
+    right: 29px;
+  }
+
+  &__btn--toggle {
+    right: 1px;
+  }
+}
+
+.flatpickr-calendar {
+  font-size: 13px;
+}
+
+.dayContainer,
+.flatpickr-calendar,
+.flatpickr-days {
+  width: 200px;
+  min-width: 200px;
+}
+
+.flatpickr-current-month .numInputWrapper,
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+  font-size: 14px;
+  font-weight: $font-weight-bold;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+  appearance: none;
+}
+
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-next-month {
+  transform: scale(0.6);
+}
+
+.flatpickr-day.has-event {
+  position: relative;
+  font-weight: 600;
+}
+
+.flatpickr-day {
+  height: 25px;
+  border-radius: 2px;
+  line-height: 25px;
+  border-color: transparent;
+
+  &.today {
+    background: $blue;
+    border-color: transparent;
+    color: $white;
+  }
+}
+
+.flatpickr-day.has-event {
+  background: #f4f4f4;
+}
