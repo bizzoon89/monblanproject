@@ -32,7 +32,7 @@ export default function initViewToggle(buttonSelector, wrapperSelector, activeCl
   const defaultBtn = [...buttons].find((b) => b.classList.contains(activeClass));
 
   if (defaultBtn) {
-    applyView(defaultBtn, false); // animate = false → без анімації
+    applyView(defaultBtn, false);
   }
 
   buttons.forEach((btn) => {

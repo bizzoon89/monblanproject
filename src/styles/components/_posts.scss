@@ -108,6 +108,7 @@
       @include media('>=tablet') {
         padding: 17px 28px;
         gap: 110px;
+        align-items: flex-start;
       }
     }
 
@@ -121,11 +122,16 @@
   &__box {
     .view-rows & {
       flex: 1;
+      max-width: 33.33%;
     }
 
     .view-tiles & {
       max-width: 50%;
     }
+  }
+
+  &__date {
+    font-size: 14px;
   }
 
   &__box--last {
@@ -142,6 +148,7 @@
 
   &__title {
     display: block;
+    font-weight: $font-weight-medium;
     margin-bottom: 10px;
   }
 

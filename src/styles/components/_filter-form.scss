@@ -60,6 +60,7 @@
     height: 26px;
     border: 0;
     border-right: 1px solid #dedede;
+    padding-left: 1px;
   }
 
   &__btn--clear {
@@ -97,16 +98,40 @@
   transform: scale(0.6);
 }
 
+.flatpickr-weekdaycontainer .flatpickr-weekday {
+  font-size: 13px;
+  color: #000;
+  font-weight: $font-weight-bold;
+}
+
 .flatpickr-day.has-event {
   position: relative;
   font-weight: 600;
+
+  &.selected {
+    color: #333437;
+  }
+}
+
+.flatpickr-current-month .numInputWrapper .cur-year {
+  font-weight: $font-weight-bold;
 }
 
 .flatpickr-day {
   height: 25px;
   border-radius: 2px;
   line-height: 25px;
-  border-color: transparent;
+  color: #333437;
+  border-color: #fff;
+
+  &.prevMonthDay,
+  &.nextMonthDay {
+    color: #929292;
+  }
+
+  &.selected {
+    color: #333437;
+  }
 
   &.today {
     background: $blue;

@@ -1,4 +1,4 @@
-import './resizeHandler.js';
+//import './resizeHandler.js';
 // import './vh'; - use it in case crosss browser vh value is needed
 
 export const HTML = document.documentElement;
